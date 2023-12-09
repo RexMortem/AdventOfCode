@@ -58,4 +58,34 @@ while (currentCat in mappings):
     currentList = nextList
     currentCat = mappings[currentCat]
 
-print("minimum (Part 1):",min(currentList))
+print("minimum of few seeds (Part 1):",min(currentList))
+
+currentList = []
+
+for line in open(filepath):
+    pairs = list(map(int, re.findall("[0-9]+", line)))
+
+    first = True
+    firstVal = None
+
+    for value in pairs:
+        if first:
+            firstVal = value 
+        else:
+            for i in range(first,first + value):
+                currentList.append(i) # way too slow; going through millions of values
+        
+        first = not first
+    break
+
+currentCat = "seed"
+
+while (currentCat in mappings):
+    nextList = []
+
+    for dataPoint in currentList:
+        nextList.append(translateUsingMappings(mappingTable[currentCat], dataPoint))
+    
+    currentList = nextList
+    currentCat = mappings[currentCat]
+    print(currentCat)
