@@ -1,3 +1,4 @@
+/* 
 class Junction{
   private static int junctionCounter = 0;
   private static ArrayList<Junction> = new ArrayList<Junction>();
@@ -38,3 +39,4 @@ public class Main{
         Junction newJunction = new Junction(5,5); 
     }
 }
+*/
