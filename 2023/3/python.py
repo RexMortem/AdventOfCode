@@ -12,11 +12,11 @@ for line in open(filepath):
     charn = 0
 
     for char in line:
-        schematic[linen].append(char)
-        charn += 1
+        schematic[linen].append(char) 
+        charn += 1 # could've just used len(schematic[0])
 
     lastchar = len(line) - 1
-    linen += 1
+    linen += 1 # could've just used len(schematic)
 
 # loading into 2D array used: could use regex to search top and bottom lines 
 
