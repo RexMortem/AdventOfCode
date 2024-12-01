@@ -1,7 +1,6 @@
 import sys
 
 lines = sys.stdin.read().strip().split("\n")
-lines 
 l1 = []
 l2 = []
 
