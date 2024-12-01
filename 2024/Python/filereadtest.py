@@ -19,11 +19,17 @@ def method2():
 def method3():
     lines = open(pathToInput,"r").readlines()
 
-methods = [method1, method2, method3]
+def method4():
+    lines = None 
+
+    with open(pathToInput,"r") as file:
+        lines = file.readlines()
+
+methods = [method1, method2, method3, method4]
 
 # Let's time them
 
 for i in range(len(methods)):
     print(f"Method {i+1}: {timeit.timeit(stmt=methods[i], number=500)}")
 
-# inconsistent BUT Method 1 is generally fastest
+# inconsistent; could be due to memory being filled? Later methods seem to generally be slower
