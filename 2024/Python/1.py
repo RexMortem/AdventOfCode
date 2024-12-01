@@ -1,4 +1,7 @@
+# NOTE: this solution does not use the Blueprint (blueprint.py) because I was a bit silly and did not write the blueprint in time!
+
 import sys
+from collections import Counter 
 
 lines = sys.stdin.read().strip().split("\n")
 l1 = []
@@ -25,10 +28,12 @@ print(dist)
 
 # Part 2 
 
-rHashMap = {}
+# rHashMap = {}
 
-for num in l2:
-    rHashMap[num] = rHashMap.get(num, 0) + 1
+# for num in l2:
+#     rHashMap[num] = rHashMap.get(num, 0) + 1
+
+rHashMap = Counter(l2)
 
 similarity = 0
 
