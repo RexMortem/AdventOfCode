@@ -2,6 +2,8 @@
 
 My various attempts at Advent of Code over the years, as I get better at programming and learn different languages! 
 
+AOC display name: `Ed Denton`
+
 ---
 
 ## Reflections
